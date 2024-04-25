@@ -6,7 +6,6 @@ import jsconfigPaths from "vite-jsconfig-paths";
 export default defineConfig({
 	plugins: [react(), jsconfigPaths()],
 	build: {
-		outDir: "../Panel-Production",
 		target: "es2015",
 		//emptyOutDir: true,
 	},
