@@ -73,7 +73,7 @@ const Header = function () {
 							aria-label="close sidebar"
 							className="drawer-overlay"
 						></label>
-						<ul className="menu p-4 w-80 min-h-full bg-slate-50 dark:bg-gray-800  gap-2">
+						<ul className="menu p-4 w-80 min-h-full bg-slate-50  gap-2">
 							{!hasPath && (
 								<li>
 									<LinkItem url={"#about"}>About</LinkItem>
