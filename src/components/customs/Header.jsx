@@ -63,57 +63,51 @@ const Header = function () {
 						<ChangeTheme />
 					</div>
 				</div>
-				{createPortal(
-					<div className="drawer drawer-end h-screen lg:hidden z-50 ">
-						<input
-							id="my-drawer-4"
-							type="checkbox"
-							className="drawer-toggle "
-						/>
-						<div className="drawer-side ">
-							<label
-								htmlFor="my-drawer-4"
-								aria-label="close sidebar"
-								className="drawer-overlay"
-							></label>
-							<ul className="menu p-4 w-80 min-h-full bg-slate-50  gap-2">
-								{!hasPath && (
-									<li>
-										<LinkItem url={"#about"}>About</LinkItem>
-									</li>
-								)}
-								{hasPath ? (
-									<>
-										<li>
-											<LinkItem url={paths.root}>Home</LinkItem>
-										</li>
-										<li>
-											<LinkItem url={paths.wiki.characters.root}>
-												Characters
-											</LinkItem>
-										</li>
-										<li>
-											<LinkItem url={paths.wiki.locations.root}>
-												Locations
-											</LinkItem>
-										</li>
-										<li>
-											<LinkItem url={paths.wiki.episodes.root}>
-												Episodes
-											</LinkItem>
-										</li>
-									</>
-								) : (
-									<li>
-										<LinkItem url={paths.wiki.characters.root}>Wiki</LinkItem>
-									</li>
-								)}
-							</ul>
-						</div>
-					</div>,
-					document.getElementById("drawers")
-				)}
 			</Container>
+			{createPortal(
+				<div className="drawer drawer-end fixed h-screen lg:hidden z-50 ">
+					<input id="my-drawer-4" type="checkbox" className="drawer-toggle " />
+					<div className="drawer-side ">
+						<label
+							htmlFor="my-drawer-4"
+							aria-label="close sidebar"
+							className="drawer-overlay"
+						></label>
+						<ul className="menu p-4 w-80 min-h-full bg-slate-50  gap-2">
+							{!hasPath && (
+								<li>
+									<LinkItem url={"#about"}>About</LinkItem>
+								</li>
+							)}
+							{hasPath ? (
+								<>
+									<li>
+										<LinkItem url={paths.root}>Home</LinkItem>
+									</li>
+									<li>
+										<LinkItem url={paths.wiki.characters.root}>
+											Characters
+										</LinkItem>
+									</li>
+									<li>
+										<LinkItem url={paths.wiki.locations.root}>
+											Locations
+										</LinkItem>
+									</li>
+									<li>
+										<LinkItem url={paths.wiki.episodes.root}>Episodes</LinkItem>
+									</li>
+								</>
+							) : (
+								<li>
+									<LinkItem url={paths.wiki.characters.root}>Wiki</LinkItem>
+								</li>
+							)}
+						</ul>
+					</div>
+				</div>,
+				document.getElementById("drawer")
+			)}
 		</header>
 	);
 };
