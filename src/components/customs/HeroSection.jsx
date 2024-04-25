@@ -3,12 +3,19 @@ import { Link } from "react-router-dom";
 import TypingAnimation from "components/customs/TypingAnimation";
 
 import paths from "core/paths";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const HeroSection = function () {
 	return (
 		<div className="hero py-14  bg-slate-50 dark:bg-base-200">
 			<div className="hero-content  flex-col lg:flex-row">
-				<img src="/images/hero.png" className="w-80 max-w-sm rounded-lg" />
+				<LazyLoadImage
+					src="/images/hero.png"
+					className="w-80 max-w-sm rounded-lg"
+					loading="lazy"
+					alt={"rick and morty"}
+				/>
+				<img />
 				<div>
 					<h1 className="text-2xl text-center md:text-left md:text-5xl font-bold">
 						The Rick and Morty Wiki.

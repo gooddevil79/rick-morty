@@ -1,10 +1,14 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 const AboutSection = function () {
 	return (
 		<div className="hero py-14   bg-slate-50 dark:bg-base-200" id="about">
 			<div className="hero-content flex-col-reverse lg:flex-row-reverse ">
-				<img
+				<LazyLoadImage
 					src="/images/explain.png"
-					className="w-80  lg:max-w-sm drop-shadow-2xl"
+					className="w-96 h-96 lg:max-w-sm"
+					loading="lazy"
+					alt={"rick and morty"}
 				/>
 				<div>
 					<h1 className="text-3xl text-center lg:text-left md:text-5xl font-bold">
