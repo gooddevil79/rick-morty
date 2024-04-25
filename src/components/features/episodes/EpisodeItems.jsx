@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const EpisodeItem = function ({ episode }) {
 	const { air_date, characters, episode: episodeNum, name } = episode;
 	return (
-		<div className="stats  bg-base-100 hover:shadow-xl shadow-md transition-shadow">
+		<div className="stats  bg-base-100  hover:shadow-xl shadow-md transition-shadow">
 			<div className="stat ">
 				<div className="stat-title font-bold text-slate-600 text-sm ">
 					{name}

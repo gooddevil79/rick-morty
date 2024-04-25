@@ -6,7 +6,7 @@ import paths from "core/paths";
 
 const HeroSection = function () {
 	return (
-		<div className="hero py-14  bg-slate-50 ">
+		<div className="hero py-14  bg-slate-50 dark:bg-base-200">
 			<div className="hero-content  flex-col lg:flex-row">
 				<img src="/images/hero.png" className="w-80 max-w-sm rounded-lg" />
 				<div>

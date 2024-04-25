@@ -15,7 +15,7 @@ const CharacterItem = function ({ character }) {
 	return (
 		<div data-aos="fade-up">
 			<Link
-				className="card   md:card-compact bg-base-100 hover:shadow-xl shadow-md transition-shadow auto-rows-auto"
+				className="card   md:card-compact bg-base-100 dark:bg-base-300 hover:shadow-xl shadow-md transition-shadow auto-rows-auto"
 				to={`${paths.wiki.characters.root}/${id}`}
 			>
 				<figure className="overflow-hidden ">

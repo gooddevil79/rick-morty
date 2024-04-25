@@ -1,6 +1,6 @@
 const AboutSection = function () {
 	return (
-		<div className="hero py-14   bg-slate-50" id="about">
+		<div className="hero py-14   bg-slate-50 dark:bg-base-200" id="about">
 			<div className="hero-content flex-col-reverse lg:flex-row-reverse ">
 				<img
 					src="/images/explain.png"
