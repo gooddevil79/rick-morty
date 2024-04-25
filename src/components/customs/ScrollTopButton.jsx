@@ -32,11 +32,7 @@ const ScrollButton = () => {
 			className={`btn btn-ghost btn-circle fixed bottom-10 right-10 ${visible ? "animate-fadeScale" : "hidden"}`}
 			onClick={scrollToTop}
 		>
-			<img
-				src="/public/images/portal.gif"
-				className="transition-all"
-				alt="Up"
-			/>
+			<img src="/images/portal.gif" className="transition-all" alt="Up" />
 		</button>
 	);
 };
