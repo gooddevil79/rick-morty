@@ -11,7 +11,7 @@ const HeroSection = function () {
 			<div className="hero-content  flex-col lg:flex-row">
 				<LazyLoadImage
 					src="/images/hero.png"
-					className="w-80 max-w-sm rounded-lg"
+					className="w-80 h-80  max-w-sm rounded-lg"
 					loading="lazy"
 					alt={"rick and morty"}
 				/>
