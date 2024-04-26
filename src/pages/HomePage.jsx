@@ -5,8 +5,8 @@ import AboutSection from "components/customs/AboutSection";
 const HomePage = function () {
 	return (
 		<div>
-			{/* <HeroSection /> */}
-			<AboutSection />
+			<HeroSection />
+			{/* <AboutSection /> */}
 		</div>
 	);
 };
