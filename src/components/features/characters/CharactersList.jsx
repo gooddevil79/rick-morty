@@ -35,7 +35,7 @@ const CharactersList = function () {
 		<CardSkeleton />
 	) : (
 		<>
-			<div className=" grid sm:grid-cols-2  md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 justify-center gap-4 mx-auto">
+			<div className=" grid  sm:grid-cols-2  md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 justify-center gap-4 mx-auto">
 				{data?.pages.map(({ results }) => {
 					return results?.map(c => <CharacterItem character={c} key={c.id} />);
 				})}

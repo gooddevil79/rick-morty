@@ -1,21 +1,21 @@
+import { createPortal } from "react-dom";
 import { useLocation } from "react-router-dom";
 
 import Container from "components/customs/Container";
 import LinkItem from "./LinkItem";
-import { HiMenuAlt1 } from "react-icons/hi";
+import ChangeTheme from "./ChangeTheme";
 import Logo from "./Logo";
+import { HiMenuAlt1 } from "react-icons/hi";
 
 import paths from "core/paths";
 import { checkPath } from "helpers/helpers";
-import ChangeTheme from "./ChangeTheme";
-import { createPortal } from "react-dom";
 
 const Header = function () {
 	const { pathname } = useLocation();
 	const hasPath = checkPath(pathname, "wiki");
 
 	return (
-		<header className="shadow-sm bg-base-100">
+		<header className="shadow-sm bg-base-100 transition-all h-max">
 			<Container>
 				<div className="navbar">
 					<div className="navbar-start">

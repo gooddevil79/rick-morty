@@ -1,15 +1,13 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import Container from "./Container";
 
 const AboutSection = function () {
 	return (
-		<div
-			className="flex justify-center py-16 px-5   bg-slate-50 dark:bg-base-200"
-			id="about"
-		>
-			<div className="hero-content flex-col-reverse lg:flex-row-reverse ">
+		<div className="py-16 px-5" id="about">
+			<div className="flex flex-col-reverse justify-center items-center lg:flex-row-reverse">
 				<LazyLoadImage
 					src="/images/explain.png"
-					className="w-96 h-96 lg:max-w-sm"
+					className="w-56 lg:w-96 md:h-96 "
 					loading="lazy"
 					alt={"rick and morty"}
 				/>

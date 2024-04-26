@@ -4,19 +4,19 @@ import TypingAnimation from "components/customs/TypingAnimation";
 
 import paths from "core/paths";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import Container from "./Container";
 
 const HeroSection = function () {
 	return (
-		<div className="py-16 px-5 grid  items-center justify-center bg-slate-50 dark:bg-base-200">
-			<div className="flex flex-col items-center lg:flex-row">
+		<Container>
+			<div className="py-16 px-5 flex items-center   flex-col  lg:flex-row">
 				<LazyLoadImage
 					src="/images/getting-out-portal.png"
-					className="mx-auto h-96 rounded-lg"
+					className="mx-auto  h-96 rounded-lg "
 					loading="lazy"
 					alt={"rick and morty"}
 				/>
-				<img />
-				<div>
+				<div className="lg:w-[60%]">
 					<h1 className="text-2xl text-center md:text-left md:text-5xl font-bold">
 						The Rick and Morty Wiki.
 					</h1>
@@ -44,12 +44,15 @@ const HeroSection = function () {
 							</div>
 						</div>
 					</div>
-					<Link className="btn btn-primary " to={paths.wiki.episodes.root}>
+					<Link
+						className="btn w-full lg:w-auto btn-primary "
+						to={paths.wiki.episodes.root}
+					>
 						Let's see this episode
 					</Link>
 				</div>
 			</div>
-		</div>
+		</Container>
 	);
 };
 

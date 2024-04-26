@@ -4,9 +4,9 @@ import AboutSection from "components/customs/AboutSection";
 
 const HomePage = function () {
 	return (
-		<div>
+		<div className=" bg-slate-50 dark:bg-base-200">
 			<HeroSection />
-			{/* <AboutSection /> */}
+			<AboutSection />
 		</div>
 	);
 };

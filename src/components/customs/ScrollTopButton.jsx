@@ -6,9 +6,9 @@ const ScrollButton = () => {
 
 	const toggleVisible = () => {
 		const scrolled = document.documentElement.scrollTop;
-		if (scrolled > 900) {
+		if (scrolled > 700) {
 			setVisible(true);
-		} else if (scrolled <= 900) {
+		} else if (scrolled <= 700) {
 			setVisible(false);
 		}
 	};
@@ -29,7 +29,7 @@ const ScrollButton = () => {
 
 	return (
 		<button
-			className={`btn btn-ghost btn-circle fixed bottom-10 right-5 ${visible ? "animate-fadeScale" : "hidden"}`}
+			className={`btn btn-ghost btn-circle fixed bottom-10 right-5 z-10 ${visible ? "animate-fadeScale" : "hidden"}`}
 			onClick={scrollToTop}
 		>
 			<img src="/images/portal.gif" className="transition-all" alt="Up" />
