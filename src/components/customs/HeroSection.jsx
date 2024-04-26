@@ -7,11 +7,11 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const HeroSection = function () {
 	return (
-		<div className="hero py-14  bg-slate-50 dark:bg-base-200">
-			<div className="hero-content  flex-col lg:flex-row">
+		<div className="py-16 px-5 grid  items-center justify-center bg-slate-50 dark:bg-base-200">
+			<div className="flex flex-col items-center lg:flex-row">
 				<LazyLoadImage
-					src="/images/hero.png"
-					className="w-80 h-80  max-w-sm rounded-lg"
+					src="/images/getting-out-portal.png"
+					className="mx-auto h-96 rounded-lg"
 					loading="lazy"
 					alt={"rick and morty"}
 				/>

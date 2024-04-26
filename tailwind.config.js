@@ -6,6 +6,7 @@ export default {
 		fontFamily: {
 			sans: "Roboto Mono, monospace",
 		},
+
 		container: {
 			center: true,
 		},

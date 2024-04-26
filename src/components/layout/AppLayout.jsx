@@ -8,9 +8,9 @@ import ScrollToTop from "components/customs/ScrollToTop";
 const AppLayout = function () {
 	return (
 		<div className="grid h-screen grid-rows-[auto_1fr_auto] ">
-			<ScrollToTop />
 			<Header />
 			<Outlet />
+			<ScrollToTop />
 			<ScrollButton />
 			<Footer />
 		</div>

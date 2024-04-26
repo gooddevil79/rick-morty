@@ -2,7 +2,10 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const AboutSection = function () {
 	return (
-		<div className="hero py-14   bg-slate-50 dark:bg-base-200" id="about">
+		<div
+			className="flex justify-center py-16 px-5   bg-slate-50 dark:bg-base-200"
+			id="about"
+		>
 			<div className="hero-content flex-col-reverse lg:flex-row-reverse ">
 				<LazyLoadImage
 					src="/images/explain.png"
