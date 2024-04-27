@@ -3,7 +3,7 @@ const Select = function ({ label, options = [], name, value, onChange }) {
 		<label className="grid lg:flex ">
 			{label && (
 				<div className="label ">
-					<span className="label-text">{label} :</span>
+					<span className="label-text">{label}:</span>
 				</div>
 			)}
 			<select

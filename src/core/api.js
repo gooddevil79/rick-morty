@@ -17,14 +17,10 @@ api.interceptors.request.use(
 
 api.interceptors.response.use(
 	({ data }) => {
-		if (data?.message) message.success(data?.message);
-
 		return data;
 	},
-	({ response: { data, status } }) => {
-		if (data?.message) message.error(data?.message);
-
-		return Promise.reject(response?.data);
+	error => {
+		return Promise.reject({ message: error?.message });
 	}
 );
 

@@ -17,7 +17,7 @@ const statusOptions = [
 	{ label: "unknown", value: Types.status.unknown },
 ];
 
-const CharactersFilterForm = function () {
+const CharactersFilterForm = function ({ isFetching, isLoading }) {
 	const initialState = {
 		name: "",
 		gender: "",
@@ -33,7 +33,10 @@ const CharactersFilterForm = function () {
 	};
 	const handleSubmit = e => {
 		e.preventDefault();
-		navigate(`${pathname}?${objectToURL(values)}`);
+		const { name, gender, status } = values;
+		if (name || gender || status) {
+			navigate(`${pathname}?${objectToURL(values)}`);
+		}
 	};
 	const handleReset = () => {
 		setValues({ name: "", gender: "", status: "" });
@@ -48,10 +51,9 @@ const CharactersFilterForm = function () {
 			status: urlParams.status || ps.status,
 		}));
 	}, [search]);
-
 	return (
 		<form
-			className="grid gap-2 md:grid-cols-1 lg:grid-cols-[1fr_1fr_200px] items-center"
+			className="grid gap-2 md:grid-cols-1 lg:grid-cols-[1fr_1fr_200px] items-center "
 			onSubmit={handleSubmit}
 			onReset={handleReset}
 		>
@@ -79,12 +81,24 @@ const CharactersFilterForm = function () {
 				/>
 			</div>
 			<div className="flex gap-1 flex-col lg:flex-row">
-				<button className="btn btn-neutral  flex-1" type="submit">
+				<button
+					className="btn btn-neutral  flex-1"
+					disabled={
+						isLoading ||
+						isFetching ||
+						(!values.gender && !values.name && !values.status)
+					}
+					type="submit"
+				>
+					{!isLoading && isFetching && (
+						<span className="loading loading-spinner"></span>
+					)}
 					Filter
 				</button>
 				<button
 					className="btn btn-sm lg:btn-md btn-outline hover:bg-slate-300"
 					type="reset"
+					disabled={isLoading || isFetching}
 				>
 					Clear
 				</button>

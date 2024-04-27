@@ -7,8 +7,6 @@ const Characters = function () {
 	return (
 		<Container>
 			<div className="p-4 md:p-4">
-				<CharactersFilterForm />
-				<Divider />
 				<CharactersList />
 			</div>
 		</Container>

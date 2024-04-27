@@ -9,7 +9,7 @@ import Container from "./Container";
 const HeroSection = function () {
 	return (
 		<Container>
-			<div className="py-16 px-5 flex items-center   flex-col  lg:flex-row">
+			<div className=" hero-content mx-auto py-16 px-5 flex items-center   flex-col  lg:flex-row">
 				<LazyLoadImage
 					src="/images/getting-out-portal.png"
 					className="mx-auto  h-96 rounded-lg "

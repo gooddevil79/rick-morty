@@ -3,7 +3,7 @@ import Container from "./Container";
 
 const AboutSection = function () {
 	return (
-		<div className="py-16 px-5" id="about">
+		<div className="hero-content mx-auto py-16 px-5" id="about">
 			<div className="flex flex-col-reverse justify-center items-center lg:flex-row-reverse">
 				<LazyLoadImage
 					src="/images/explain.png"

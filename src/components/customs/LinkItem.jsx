@@ -1,6 +1,6 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
-const LinkItem = function ({ url = "/", children }) {
+const LinkItem = function ({ url = "/", children, className = "" }) {
 	const navigate = useNavigate();
 	const handleScroll = function (e) {
 		e.preventDefault();
@@ -11,11 +11,13 @@ const LinkItem = function ({ url = "/", children }) {
 	};
 
 	return url.includes("#") ? (
-		<a href={url} onClick={handleScroll}>
+		<a href={url} className={className} onClick={handleScroll}>
 			{children}
 		</a>
 	) : (
-		<NavLink to={url}>{children}</NavLink>
+		<NavLink to={url} className={className}>
+			{children}
+		</NavLink>
 	);
 };
 

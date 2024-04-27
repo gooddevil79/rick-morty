@@ -11,7 +11,7 @@ const Input = function ({
 			<div className="flex items-center gap-2 justify-center">
 				{label && (
 					<div className="label">
-						<span className="label-text">{label} :</span>
+						<span className="label-text ">{label}:</span>
 					</div>
 				)}
 				<input
