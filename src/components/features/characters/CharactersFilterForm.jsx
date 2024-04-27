@@ -17,7 +17,7 @@ const statusOptions = [
 	{ label: "unknown", value: Types.status.unknown },
 ];
 
-const CharactersFilterForm = function ({ isFetching, isLoading }) {
+const CharactersFilterForm = function ({ isFetching, isLoading, error }) {
 	const initialState = {
 		name: "",
 		gender: "",
@@ -84,7 +84,7 @@ const CharactersFilterForm = function ({ isFetching, isLoading }) {
 				<button
 					className="btn btn-neutral  flex-1"
 					disabled={
-						isLoading ||
+						(!error && isLoading) ||
 						isFetching ||
 						(!values.gender && !values.name && !values.status)
 					}

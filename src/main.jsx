@@ -6,7 +6,9 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import "styles/index.css";
 import { Toaster } from "react-hot-toast";
-const client = new QueryClient({});
+const client = new QueryClient({
+	defaultOptions: { queries: { refetchOnWindowFocus: false } },
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<QueryClientProvider client={client}>

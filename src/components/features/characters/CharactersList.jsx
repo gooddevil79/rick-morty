@@ -43,7 +43,11 @@ const CharactersList = function () {
 
 	return (
 		<>
-			<CharactersFilterForm isLoading={isLoading} isFetching={isFetching} />
+			<CharactersFilterForm
+				isLoading={isLoading}
+				isFetching={isFetching}
+				error={status === "error"}
+			/>
 			<Divider />
 
 			{!data && status === "error" && (
@@ -52,7 +56,7 @@ const CharactersList = function () {
 					<img
 						src="/images/artofFinger.png"
 						className="max-w-96 h-96 mx-auto"
-						alt=""
+						alt="not found"
 					/>
 				</div>
 			)}

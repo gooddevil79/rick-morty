@@ -20,6 +20,9 @@ api.interceptors.response.use(
 		return data;
 	},
 	error => {
+		if (error?.response?.status === 404) {
+			return Promise.reject({ message: "No data found for this filter" });
+		}
 		return Promise.reject({ message: error?.message });
 	}
 );
