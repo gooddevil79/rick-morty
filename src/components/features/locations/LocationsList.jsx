@@ -1,5 +1,5 @@
 import LocationItem from "./LocationItem";
-import CardSkeleton from "components/customs/CardSkeleton";
+import Skeleton from "components/customs/Skeleton";
 
 import api from "core/api";
 import { useInfinitScrollingQuery } from "hooks/useInfinitScrollingQuery";
@@ -13,7 +13,7 @@ const CharactersList = function () {
 	const { data, fetchNextPage, isLoading, isFetchingNextPage, hasNextPage } =
 		useInfinitScrollingQuery(["locations"], queryFn);
 	return isLoading ? (
-		<CardSkeleton />
+		<Skeleton />
 	) : (
 		<>
 			<div className=" grid sm:grid-cols-2  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center gap-4 mx-auto">
@@ -21,7 +21,7 @@ const CharactersList = function () {
 					return results?.map(l => <LocationItem location={l} key={l.id} />);
 				})}
 			</div>
-			{isFetchingNextPage && <CardSkeleton />}
+			{isFetchingNextPage && <Skeleton />}
 			{hasNextPage && (
 				<button
 					className="btn btn-outline bg-secondary-content block mx-auto mt-5"

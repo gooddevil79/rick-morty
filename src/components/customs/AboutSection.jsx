@@ -7,7 +7,7 @@ const AboutSection = function () {
 			<div className="flex flex-col-reverse justify-center items-center lg:flex-row-reverse">
 				<LazyLoadImage
 					src="/images/explain.png"
-					className="w-56 lg:w-96 md:h-96 "
+					className="w-56 lg:w-96 h-96 "
 					loading="lazy"
 					alt={"rick and morty"}
 				/>
