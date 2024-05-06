@@ -21,6 +21,14 @@ const Header = function () {
 			drawerInputRef.current.checked = false;
 		}
 	};
+	const handleScroll = function (e) {
+		e.preventDefault();
+		// navigate("/");
+		const id = e.target.getAttribute("href")?.replace("#", "");
+		const element = document.getElementById(id);
+		element?.scrollIntoView({ behavior: "smooth" });
+	};
+
 	return (
 		<header className="shadow-sm bg-base-100 transition-all h-max">
 			<Container>
@@ -72,7 +80,7 @@ const Header = function () {
 				</div>
 			</Container>
 			{createPortal(
-				<div className="drawer drawer-end fixed h-screen lg:hidden z-50 ">
+				<div className="drawer drawer-end  fixed  lg:hidden z-50 ">
 					<input
 						id="my-drawer"
 						type="checkbox"
@@ -91,7 +99,11 @@ const Header = function () {
 						>
 							{!hasPath && (
 								<li>
-									<LinkItem className="menu-item" url={"#about"}>
+									<LinkItem
+										className="menu-item"
+										url={"#about"}
+										handleScroll={handleNavigate}
+									>
 										About
 									</LinkItem>
 								</li>

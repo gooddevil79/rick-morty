@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+	RouterProvider,
+	createBrowserRouter,
+	ScrollRestoration,
+} from "react-router-dom";
 
 // layout
 import AppLayout from "components/layout/AppLayout";

@@ -51,11 +51,11 @@ const CharactersList = function () {
 			<Divider />
 
 			{!data && status === "error" && (
-				<div className="text-center">
-					<p>NO RECORD FOUND</p>
+				<div className=" flex flex-col items-center justify-center">
+					<p>NO DATA TO SHOW</p>
 					<img
 						src="/images/artofFinger.png"
-						className="max-w-96 h-96 mx-auto"
+						className="max-w-86 h-96 mx-auto"
 						alt="not found"
 					/>
 				</div>
